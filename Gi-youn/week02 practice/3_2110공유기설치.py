@@ -6,7 +6,7 @@ for i in range(n):
 
 array.sort()
 
-
+# print(array)
 def binary_search(array, start, end):
     while start <= end:
         mid = (start + end) // 2
@@ -17,7 +17,7 @@ def binary_search(array, start, end):
             if array[i] >= current + mid:
                 count += 1
                 current = array[i]
-
+   
         if count >= c:
             global answer
             start = mid + 1

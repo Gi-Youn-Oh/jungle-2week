@@ -16,7 +16,7 @@ def binary(l, N, start, end):
         return binary(l, N, start, m-1)
     else:
         return binary(l, N, m+1, end)
-
+            
 for l in M:
     start = 0
     end = len(N)-1

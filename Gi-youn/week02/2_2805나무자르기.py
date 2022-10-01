@@ -27,31 +27,33 @@ while(start <= end):
     else:
         result = mid # 최대한 덜 잘랐을 때가 정답이므로, 여기에서 result에 기록
         start = mid + 1
+    
+# end start mid 마지막 서클 전 확인 해보기 
  
 # 정답출력
 print(result)
 
 
-# 반복문
-def binary_search(arr,val):
-    first, last = 0, arr.len()
-    while first <=last:
-        mid = (first + last) // 2
-        if arr[mid] == val: return mid
-        if arr[mid] > val: last -mid -1
-        else: first = mid +1
-    return -1
+# # 반복문
+# def binary_search(arr,val):
+#     first, last = 0, arr.len()
+#     while first <=last:
+#         mid = (first + last) // 2
+#         if arr[mid] == val: return mid
+#         if arr[mid] > val: last -mid -1
+#         else: first = mid +1
+#     return -1
 
-# 재귀
-def binary_search(arr, target, low = None, high =None):
-    low, high = low or 0, high or len(arr) -1
-    if low > high:
-        return -1
-    mid = (low + high) // 2
-    if arr[mid] > target:
-        return binary_search(arr, target, low, mid)
-    if arr[mid] == target:
-        return mid
-    if arr[mid] < target:
-        return binary_search(arr, target, mid + 1,)
+# # 재귀
+# def binary_search(arr, target, low = None, high =None):
+#     low, high = low or 0, high or len(arr) -1
+#     if low > high:
+#         return -1
+#     mid = (low + high) // 2
+#     if arr[mid] > target:
+#         return binary_search(arr, target, low, mid)
+#     if arr[mid] == target:
+#         return mid
+#     if arr[mid] < target:
+#         return binary_search(arr, target, mid + 1,)
 
