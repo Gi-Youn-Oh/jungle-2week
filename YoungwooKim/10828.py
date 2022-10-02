@@ -40,3 +40,5 @@ for _ in range(n) :
         
         else :
             print(stk[ptr - 1])
+
+    # for else와 break 대신 함수를 정의하여 return

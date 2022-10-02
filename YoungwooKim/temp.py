@@ -1,4 +1,7 @@
-a = [1, 2, 3, 4]
+tmp = []
 
-if '3' in a :
-    print('True')
+if not tmp :
+    print(True)
+
+else :
+    print(False)
