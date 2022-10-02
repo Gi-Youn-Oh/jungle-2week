@@ -10,7 +10,7 @@ testcase.sort()
 
 n, c = map(int, testcase_info.split())
 
-start = 1 # 1이 항상 최소값인가?
+start = 1 # 1이 최소값
 end = testcase[-1] - testcase[0]
 
 res = 0
@@ -22,7 +22,7 @@ while start <= end :
     current = testcase[0]
 
     for i in range(1, n) :
-        if testcase[i] - current >= mid : # i = 3 -> i = 4 - i = 3
+        if testcase[i] - current >= mid : # i = 3 -> (i = 4) - (i = 3) 최소 간격보다 먼 곳에 설치 가능
             count = count + 1
             current = testcase[i] # 변수[index]는 업데이트 안됨!
         
@@ -34,4 +34,5 @@ while start <= end :
         end = mid - 1
 
 print(res)
+
 # 인접한 두 공유기의 '최대' 간격을 이분 탐색

@@ -10,6 +10,7 @@ testcase = list(map(int, sys.stdin.readline().split()))
 
 start = 0
 end = max(testcase)
+res = 0
 
 while start <= end :
     total = 0 # 들고갈 수 있는 나무
@@ -19,15 +20,14 @@ while start <= end :
         if tree > mid :
             total = total + (tree - mid)
 
-    if total >= m :
+    if total > m :
         start = mid + 1
 
     else :
-        
+        res = mid
         end = mid - 1
-        
 
-print(end)
+print(res)
 
 # if total >= m , print(end)
 
