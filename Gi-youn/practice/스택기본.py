@@ -10,10 +10,10 @@ class stack:
     # 데이터 넣기
     def push(self, item):
         self.data.append(item) 
-    # 데이터 뽑기 / 원본 삭제
+    # 최상단 요소를  꺼내고 return
     def pop(self):
         return self.data.pop()
-    # 데이터 복사 / 원본 유지
+    # #최상단 요소를 출력
     def peek(self):
         return self.data[-1]
 
@@ -68,4 +68,4 @@ while not(operator.is_empty()):
     result.append(operator.pop())
 
 
-print('',join(result))
+print('', join(result))
