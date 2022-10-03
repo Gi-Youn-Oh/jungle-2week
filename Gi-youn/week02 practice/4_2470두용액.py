@@ -45,4 +45,3 @@ binary_search(array, start, end)
 print(answer)
 
 # 용액값의 차가 핵심 
--99 -2 -1 4 98

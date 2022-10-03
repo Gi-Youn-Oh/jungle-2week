@@ -4,7 +4,7 @@ input = sys.stdin.readline
 N = int(input().rstrip()) # rstrip() > 다음 열로 
 arr = list(map(int, input().split()))
 arr.sort() # 작은 수 부터 최대 수까지
-
+print(arr)
 left, right = 0, N-1 # 제일 작은 수 즉 arr list의 첫번째 인덱스  / 제일 큰 수 인덱스의 가장 마지막 인덱스
 idxL, idxR =0,0  #변수로두고 교체해주기
 _sum = 0 
@@ -14,7 +14,7 @@ while left < right:
     _sum = arr[left] + arr[right]
     if _min > abs(_sum):
         idxL = left
-        idxRE = right
+        idxR = right
         _min = abs(_sum)
     if _sum <0 :
         left+=1
@@ -25,6 +25,7 @@ while left < right:
         break
 
 print(arr[idxL], arr[idxR])
+
 
 
 

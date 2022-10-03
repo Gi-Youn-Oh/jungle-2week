@@ -12,7 +12,7 @@ white = 0
 def solution(x,y,N):
     global white, blue
     color = board[x][y]
-    for i in range (x,X+N):
+    for i in range (x,x+N):
         for j in range(y,y+N):
             if color != board[i][j]:
                 solution(x,y,N//2)

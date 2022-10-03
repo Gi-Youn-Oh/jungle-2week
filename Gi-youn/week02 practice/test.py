@@ -1,33 +1,24 @@
-from ctypes.wintypes import tagRECT
+# import sys
+# input = sys.stdin.readline
 
+# #입력 데이터 수를 입력받는다.
+# num = int(input())
 
-n, m = list(map(int, input().split(' ')))
-tree_list = list(map(int, input().split()))
+# stack = []
+arr= []
+for _ in range(5):
+    arr.append(list(map(str,input())))
+print(arr)
+# arr = list(map(int, input().split()))
+# print(arr)
+# arr = map(int, input())
+# print(arr)
+# arr = list(int, input().split())
+# print(arr)
 
-start = 0
-end = max(tree_list)
+# arr=[list(map(input().strip())) for _ in range(num)]
+# # for i in range(num) :
+# #     #문자열 하나씩 끊어서 입력받기 #((()) 입력 시 ['(', '(', '(', ')', ')'] 로 입력된다.
+# #     arr = list(map(input().split()))
 
-knife_len = 0
-while(start <= end):
-    total=0
-    mid = (start + end) // 2
-    for i in tree_list:
-        if i > mid :
-            total += i-mid
-    if total < m :
-        end = mid - 1
-    else :
-        knife_len = mid
-        start = mid +1
-
-print(knife_len)
-
-
-
-
-
-
-
-
-
-
+# print(arr)
