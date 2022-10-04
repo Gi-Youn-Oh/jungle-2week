@@ -1,24 +1,15 @@
-# import sys
-# input = sys.stdin.readline
 
-# #입력 데이터 수를 입력받는다.
-# num = int(input())
+N = 5
 
-# stack = []
-arr= []
-for _ in range(5):
-    arr.append(list(map(str,input())))
-print(arr)
-# arr = list(map(int, input().split()))
-# print(arr)
-# arr = map(int, input())
-# print(arr)
-# arr = list(int, input().split())
-# print(arr)
+def mul(matrix1,matrix2):
+    ans=[[0 for _ in range(N)] for _ in range(N)]
+    for i in range(N): # 행
+        for j in range(N): # 열
+            for k in range(N): # 새롭게 곱해진 행렬의 원소 
+                ans[i][j] += matrix1[i][k]*matrix2[k][j] #각원소에 대한 표현
+            ans[i][j] %=1000
+    return ans
 
-# arr=[list(map(input().strip())) for _ in range(num)]
-# # for i in range(num) :
-# #     #문자열 하나씩 끊어서 입력받기 #((()) 입력 시 ['(', '(', '(', ')', ')'] 로 입력된다.
-# #     arr = list(map(input().split()))
-
-# print(arr)
+#     # 행렬의 곱 이해하기
+# tmp=DoC(M//2,Matrix) 
+# 이해하기
