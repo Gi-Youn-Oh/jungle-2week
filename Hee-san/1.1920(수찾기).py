@@ -4,7 +4,7 @@
 # M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0을 출력한다.
 
 import sys
-sys.stdin = open("input.txt", 'r')
+
 input = sys.stdin.readline
 
 n = int(input())
@@ -22,7 +22,7 @@ sortedNumList = sorted(num_list)
 
 
 # while else 문 사용
-def num(sortedNumList):
+def findSame(sortedNumList):
     for i in target_list:
         start = 0
         end = len(sortedNumList) - 1
@@ -40,7 +40,7 @@ def num(sortedNumList):
             print(0)
 
 
-num(sortedNumList)
+findSame(sortedNumList)
 
 
 # for 문 안에 함수를 넣어서 함수를 반복 실행한다. 

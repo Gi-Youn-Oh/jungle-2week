@@ -17,16 +17,16 @@ result = []
 
 
 def solution(x, y, N):
-    color = paper[x][y]
+    first = paper[x][y]
     for i in range(x, x+N):
         for j in range(y, y+N):
-            if color != paper[i][j]:
+            if first != paper[i][j]:
                 solution(x, y, N//2)
                 solution(x, y+N//2, N//2)
                 solution(x+N//2, y, N//2)
                 solution(x+N//2, y+N//2, N//2)
                 return
-    if color == 0:
+    if first == 0:
         result.append(0)
     else:
         result.append(1)
