@@ -17,7 +17,7 @@ import sys
 N, M = map(int, sys.stdin.readline().split())
 trees = list(map(int, sys.stdin.readline().split()))
 
-start, end = 1, sum(trees)
+start, end = 1, max(trees)
 while start <= end:
     mid = (start+end)//2  # 중간 위치  mid가 톱날의 길이를 의미한다.
     gain = 0
